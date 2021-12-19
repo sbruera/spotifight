@@ -4,10 +4,13 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build"
+    "build": "vue-cli-service build",
+    "server": "node server",
+    "dev": "run-p server serve"
   },
   "dependencies": {
     "core-js": "^3.6.5",
+    "cors": "^2.8.5",
     "register-service-worker": "^1.7.1",
     "vue": "^2.6.11",
     "vue-router": "^3.2.0",
@@ -19,6 +22,11 @@
     "@vue/cli-plugin-router": "~4.5.0",
     "@vue/cli-plugin-vuex": "~4.5.0",
     "@vue/cli-service": "~4.5.0",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "http-proxy-middleware": "^2.0.1",
+    "npm-run-all": "^4.1.5",
+    "request": "^2.88.2",
     "vue-template-compiler": "^2.6.11"
   }
 }

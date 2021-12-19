@@ -1,18 +1,25 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Login v-if="!token" />
+    <WebPlayback v-else />
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import Login from "@/components/Login.vue";
+import WebPlayback from "@/components/WebPlayback.vue";
 
 export default {
-  name: 'Home',
+  name: "Home",
   components: {
-    HelloWorld
-  }
-}
+    Login,
+    WebPlayback,
+  },
+  computed: {
+    token() {
+      return this.$store.getters.token;
+    },
+  },
+};
 </script>
