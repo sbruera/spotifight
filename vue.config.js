@@ -1,11 +1,11 @@
 module.exports = {
   devServer: {
     proxy: {
-      "^/auth": {
+      "^/api": {
         target: "http://localhost:5000",
         changeOrigin: true,
         secure: false,
-        pathRewrite: { "^/auth": "/auth" },
+        pathRewrite: { "^/api": "/api" },
         logLevel: "debug",
       },
     },

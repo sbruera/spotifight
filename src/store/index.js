@@ -14,7 +14,7 @@ export default new Vuex.Store({
   },
   actions: {
     async retrieveToken({ commit }) {
-      const response = await fetch("http://localhost:5000/auth/token", {
+      const response = await fetch("http://localhost:5000/api/v1/auth/token", {
         mode: "cors",
         headers: {
           "Access-Control-Allow-Origin": "*",
