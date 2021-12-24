@@ -10,6 +10,15 @@ npm install
 npm run dev
 ```
 
+### If you want to run them separately 
+```
+//Front-end
+npm run serve
+
+//Back-end
+npm run server
+```
+
 ### Configuration 
 
 ##### Change the name of the .env.dev file to .env and configure all the variables 
